@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- HTML 문서의 버전을 정의합니다. 여기서는 HTML5를 사용합니다. -->
+<html> <!-- HTML 문서의 루트 요소입니다. -->
+<head> <!-- 문서의 메타데이터를 포함하는 컨테이너입니다. -->
+	<meta charset="UTF-8"> <!-- 문서의 문자 인코딩을 정의합니다. 여기서는 UTF-8을 사용합니다. -->
+	<title>Insert title here</title> <!-- 문서의 제목을 정의합니다. -->
+	<script type="text/javascript"> <!-- JavaScript 코드를 포함하는 요소입니다. -->
+		function chk() { // chk라는 이름의 함수를 정의합니다.
+			if (!frm.num.value) { // 만약 폼의 num 필드가 비어 있다면,
+				alert("똑바로 해!"); // 경고 메시지를 표시합니다.
+				frm.num.focus(); // num 필드에 포커스를 둡니다.
+				return false; // 폼 제출을 중단합니다.
+			}
+			if (isNaN(frm.num.value)) { // 만약 num 필드의 값이 숫자가 아니라면,
+				alert("숫자라구 으이그!"); // 경고 메시지를 표시합니다.
+				frm.num.focus(); // num 필드에 포커스를 둡니다.
+				frm.num.value = ""; // num 필드의 값을 비웁니다.
+				return false; // 폼 제출을 중단합니다.
+			}
+			return true; // 폼 제출을 계속합니다.
+		}
+		function init() { // init라는 이름의 함수를 정의합니다.
+			frm.num.focus(); // 페이지가 로드될 때 num 필드에 포커스를 둡니다.
+		}
+	</script>
+</head>
+
+<body onload="init()"> <!-- 페이지가 로드될 때 init 함수를 호출합니다. -->
+	<h2>숫자를 입력하세요</h2> <!-- h2 크기의 제목을 표시합니다. -->
+	<form action="Fibonazzi" name="frm" onsubmit="return chk()"> <!-- 폼을 정의하고, 제출 시 chk 함수를 호출합니다. -->
+		숫자 : <input type="text" name="num"><p> <!-- 숫자를 입력할 수 있는 텍스트 필드를 만듭니다. -->
+			<input type="submit" vale="확인"> <!-- 제출 버튼을 만듭니다. -->
+	</form>
+
+</body>
+
+</html>

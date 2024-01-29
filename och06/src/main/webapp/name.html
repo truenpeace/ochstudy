@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!-- HTML 문서의 버전을 정의합니다. 여기서는 HTML5를 사용합니다. -->
+<html> <!-- HTML 문서의 루트 요소입니다. -->
+<head> <!-- 문서의 메타데이터를 포함하는 컨테이너입니다. -->
+<meta charset="UTF-8"> <!-- 문서의 문자 인코딩을 정의합니다. 여기서는 UTF-8을 사용합니다. -->
+<title>Insert title here</title> <!-- 문서의 제목을 정의합니다. -->
+<script type="text/javascript"> <!-- JavaScript 코드를 포함하는 요소입니다. -->
+	function chk() { // chk라는 이름의 함수를 정의합니다.
+		if (!frm.name.value) { // 만약 폼의 이름 필드가 비어 있다면,
+			alert("너 이름이 뭐니 ?"); // 경고 메시지를 표시합니다.
+			frm.name.focus(); // 이름 필드에 포커스를 둡니다.
+			return false; // 폼 제출을 중단합니다.
+		}
+		return true; // 폼 제출을 계속합니다.
+	}
+</script>
+</head>
+<body> <!-- 문서의 본문을 포함하는 요소입니다. -->
+	<h2>이름을 입력하세요</h2> <!-- h2 크기의 제목을 표시합니다. -->
+	<form action="greet.jsp" name="frm" methd="get" onsubmit="return chk()"> <!-- 폼을 정의하고, 제출 시 chk 함수를 호출합니다. -->
+			이름 : <input type="text" name="name"><p> <!-- 이름을 입력할 수 있는 텍스트 필드를 만듭니다. -->
+				<input type="submit" value="확인"> <!-- 제출 버튼을 만듭니다. -->
+	</form>
+</body>
+</html>
