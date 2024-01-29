@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- HTML5 문서 타입 선언 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 문서의 문자 인코딩 설정 -->
+<title>Insert title here</title>
+<!-- 웹 페이지의 제목 설정 -->
+</head>
+<body>
+
+	<h2>수정할 부서코드 입력</h2>
+	<!-- 페이지 제목 -->
+
+	<form action="myRetrieve.jsp">
+		<!-- 사용자가 입력한 데이터를 처리할 myRetrieve.jsp로 폼 데이터를 전송 -->
+		부서코드 : <input type="number" name="dno" required="required"><p>
+		<!-- 숫자 타입의 입력 필드로, 부서 코드를 입력받습니다. 
+		     'required' 속성은 이 필드가 필수 입력임을 명시합니다. -->
+
+		<input type="submit" value="확인">
+		<!-- 데이터 전송 버튼 -->
+	</form>
+
+</body>
+</html>
