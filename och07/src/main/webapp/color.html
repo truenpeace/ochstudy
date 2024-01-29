@@ -1,0 +1,25 @@
+<!DOCTYPE html> <!-- HTML5 문서 유형 선언 -->
+<html>
+
+<head>
+	<meta charset="UTF-8"> <!-- 웹 페이지의 문자 인코딩을 UTF-8로 설정 -->
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h2>좋아하는 색깔은 ?</h2>
+	<form action="color.jsp"> <!-- 폼 시작. 사용자가 데이터를 입력하면 "color.jsp" 페이지로 전송 -->
+		<select name="color"> <!-- 선택 목록 시작. 사용자가 선택한 항목의 값은 "color"라는 이름으로 전송 -->
+			<option value="red">빨강</option> <!-- 선택 항목. "빨강"을 선택하면 "red"라는 값이 전송 -->
+			<option value="orange">주황</option>
+			<option value="yellow">노랑</option>
+			<option value="green">초록</option>
+			<option value="blue">파랑</option>
+			<option value="navy">남색</option>
+			<option value="violet">보라</option>
+		</select><p>
+			<input type="submit" value="확인"> <!-- 제출 버튼. 버튼을 클릭하면 폼 데이터가 "color.jsp" 페이지로 전송 -->
+	</form> 
+</body> 
+
+</html> 
