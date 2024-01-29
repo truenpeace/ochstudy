@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.num.value) { // 폼에 넘버에 밸류값이 없다면,
+			alert("숫자 입력"); // 알림 표시
+			frm.num.focus(); // 포커스를 폼의 넘버에 갔다둬
+			return false; // 펄스값 반환
+		}
+		if (isNaN(frm.num.value)) {
+			alert("숫자가 아님 헐?");
+			frm.num.focus();
+			frm.num.value = ""; // 입력된 글자 지우기
+			return false;
+		}
+	return true;
+	}
+	
+</script>
+
+</head>
+<body>
+	<h1>숫자를 입력하세요</h1>
+	<form action="Add3" name="frm" onsubmit="return chk()" method="get">
+		<!--주석은 ctrl + shift + / -->
+		숫자: <input type="text" name="num"> <p>
+		위치: <input type="text" name="loc"> <p>
+			<input type="submit" value="확인">		
+	</form>
+</body>
+</html>
